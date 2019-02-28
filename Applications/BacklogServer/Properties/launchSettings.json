@@ -12,6 +12,7 @@
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
+        "DISABLE_AUTH": "true",
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
