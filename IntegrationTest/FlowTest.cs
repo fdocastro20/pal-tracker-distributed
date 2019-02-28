@@ -67,7 +67,6 @@ namespace IntegrationTest
             HttpResponseMessage response;
 
             response = _httpClient.Get(_registrationServer.Url());
-            var ok = response.Content.ReadAsStringAsync().Result;
             Assert.Equal("Noop!", response.Content.ReadAsStringAsync().Result);
 
             var createdUserId = _httpClient.Post(_registrationServer.Url("/registration"), new Dictionary<string, object>
@@ -96,7 +95,6 @@ namespace IntegrationTest
             Assert.True(response.IsSuccessStatusCode);
 
             response = _httpClient.Get(_allocationsServer.Url());
-            var ok2 = response.Content.ReadAsStringAsync().Result;
             Assert.Equal("Noop!", response.Content.ReadAsStringAsync().Result);
 
             var createdAllocationId = _httpClient.Post( _allocationsServer.Url($"/allocations?projectId={createdProjectId}"), new Dictionary<string, object>
