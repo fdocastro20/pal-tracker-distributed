@@ -28,8 +28,16 @@ namespace Allocations
 
             _logger.LogInformation($"Attempting to fetch projectId: {projectId}");
 
+            var strm = await streamTask;
+
             var serializer = new DataContractJsonSerializer(typeof(ProjectInfo));
-            var project = serializer.ReadObject(await streamTask) as ProjectInfo;
+            var project = serializer.ReadObject(strm) as ProjectInfo;
+
+            if(project == null)
+            {
+                _logger.LogError($"No project found matching {projectId}");
+                return null;
+            }
 
             _projectCache.Add(projectId, project);
             _logger.LogInformation($"Caching projectId: {projectId}");
