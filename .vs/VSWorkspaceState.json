@@ -1,0 +1,21 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.circleci",
+    "\\Components\\Projects",
+    "\\Databases",
+    "\\Databases\\expenses-database",
+    "\\Databases\\expenses-database\\migrations",
+    "\\Databases\\registration-database",
+    "\\Databases\\registration-database\\migrations",
+    "\\Databases\\timesheets-database",
+    "\\Databases\\timesheets-database\\migrations",
+    "\\PlatformServices",
+    "\\PlatformServices\\ConfigServer",
+    "\\PlatformServices\\ConfigServer\\src",
+    "\\PlatformServices\\ConfigServer\\src\\main",
+    "\\PlatformServices\\ConfigServer\\src\\main\\resources"
+  ],
+  "SelectedNode": "\\IntegrationTest\\FlowTest.cs",
+  "PreviewInSolutionExplorer": false
+}
